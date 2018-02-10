@@ -6,7 +6,6 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
-
 void printMatrix(int** mat, int m, int n){
     for(int idx = 0; idx < m; idx++){
         for(int idx1 = 0; idx1 < n; idx1++){
@@ -89,7 +88,7 @@ int main(int argc, char** argv){
     sscanf(buf, "%d", &p);
 
     //allocate and reading matrix
-    
+
     int*** mat3d = allocateMatrix3d(m, n, p);
     readMatrix3d(mat3d, m, n, p);
 
@@ -98,6 +97,5 @@ int main(int argc, char** argv){
 
     //free the resources
     freeMatrix3d(mat3d, m, p);
-
     return 0;
 }
